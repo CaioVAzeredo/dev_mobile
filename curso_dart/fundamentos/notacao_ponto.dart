@@ -1,4 +1,4 @@
-void main() {
+main() {
   double nota = 6.99;
   nota.roundToDouble(); //aredonda a nota
   print(nota);
