@@ -1,20 +1,22 @@
 import './produto.dart';
 
-class vendaItem {
-  late Produto produto;
-  late int quantidade;
-  late double _preco;
+class VendaItem {
+  Produto? produto;
+  int quantidade;
+  double? _preco;
 
-  vendaItem({required this.produto, this.quantidade = 1});
+  VendaItem({this.produto, this.quantidade = 1});
 
   double get preco {
     if (produto != null && _preco == null) {
-      _preco = produto.precoComDesconto;
+      _preco = produto!.precoComDesconto;
     }
-    return _preco;
+    return _preco!;
   }
 
   void set preco(double novoPreco) {
-    _preco = novoPreco;
+    if (novoPreco > 0) {
+      _preco = novoPreco;
+    }
   }
 }

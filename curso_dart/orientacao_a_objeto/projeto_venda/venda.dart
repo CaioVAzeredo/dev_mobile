@@ -3,7 +3,7 @@ import 'venda-item.dart';
 
 class Venda {
   late Cliente cliente;
-  List<vendaItem> itens = [];
+  List<VendaItem> itens = [];
 
   Venda({required this.cliente, this.itens = const []});
 
